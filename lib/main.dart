@@ -1,41 +1,44 @@
 import 'package:flutter/material.dart';
+import 'package:flutterapp/nkeloapp/generatedewalle_logindarkwidget/GeneratedEWalle_logindarkWidget.dart';
+import 'package:flutterapp/nkeloapp/generatedewalle_homedarkwidget/GeneratedEWalle_homedarkWidget.dart';
+import 'package:flutterapp/nkeloapp/generatedewalle_menudarkwidget/GeneratedEWalle_menudarkWidget.dart';
+import 'package:flutterapp/nkeloapp/generatedewalle_loginlightwidget/GeneratedEWalle_loginlightWidget.dart';
+import 'package:flutterapp/nkeloapp/generatedewalle_homelightwidget/GeneratedEWalle_homelightWidget.dart';
+import 'package:flutterapp/nkeloapp/generatedewalle_menulightwidget/GeneratedEWalle_menulightWidget.dart';
+import 'package:flutterapp/nkeloapp/generatedewalle_design_lightwidget/GeneratedEWalle_Design_LightWidget.dart';
+import 'package:flutterapp/nkeloapp/generatedewalle_design_darkwidget/GeneratedEWalle_Design_DarkWidget.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(nkeloApp());
+}
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+class nkeloApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // Application name
-      title: 'Flutter Hello World',
-      // Application theme data, you can set the colors for the application as
-      // you want
+      title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      // A widget which will be started on application startup
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  final String title;
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        // The title text which will be shown on the action bar
-        title: Text(title),
-      ),
-      body: Center(
-        child: Text(
-          'Hello, World!',
-        ),
-      ),
+      initialRoute: '/GeneratedEWalle_logindarkWidget',
+      routes: {
+        '/GeneratedEWalle_logindarkWidget': (context) =>
+            GeneratedEWalle_logindarkWidget(),
+        '/GeneratedEWalle_homedarkWidget': (context) =>
+            GeneratedEWalle_homedarkWidget(),
+        '/GeneratedEWalle_menudarkWidget': (context) =>
+            GeneratedEWalle_menudarkWidget(),
+        '/GeneratedEWalle_loginlightWidget': (context) =>
+            GeneratedEWalle_loginlightWidget(),
+        '/GeneratedEWalle_homelightWidget': (context) =>
+            GeneratedEWalle_homelightWidget(),
+        '/GeneratedEWalle_menulightWidget': (context) =>
+            GeneratedEWalle_menulightWidget(),
+        '/GeneratedEWalle_Design_LightWidget': (context) =>
+            GeneratedEWalle_Design_LightWidget(),
+        '/GeneratedEWalle_Design_DarkWidget': (context) =>
+            GeneratedEWalle_Design_DarkWidget(),
+      },
     );
   }
 }
